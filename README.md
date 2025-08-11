@@ -46,6 +46,12 @@ component Navbar:
 npm install -g vibescript
 ```
 
+**Note:** If you get an access error, try using `sudo`:
+```bash
+sudo npm install -g vibescript
+```
+
+
 You’ll also need an **OpenAI API key**:
 
 ```bash

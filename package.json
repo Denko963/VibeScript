@@ -1,6 +1,6 @@
 {
   "name": "vibescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The ultimate prompt-driven, component-based, AI-powered, vibe-oriented programming language.",
   "type": "module",
   "main": "bin/vibe.js",
