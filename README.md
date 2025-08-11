@@ -64,6 +64,8 @@ export OPENAI_API_KEY="your_api_key_here"
 
 ### Create a `.vibe` file
 
+Check out the `example/App.vibe` file for a complete working example, or create your own:
+
 ```vibescript
 component NavButton:
     "A glowing button that says 'Sign Up' in TailwindCSS."
@@ -84,7 +86,11 @@ page HomePage:
 ### Build Once
 
 ```bash
-vibe App.vibe
+# Build the example app
+vibe example/App.vibe
+
+# Or build your own file
+vibe MyApp.vibe
 ```
 
 Outputs HTML to `dist/`.
@@ -94,7 +100,11 @@ Outputs HTML to `dist/`.
 ### Hot Reload (Dev Mode)
 
 ```bash
-vibe App.vibe --watch
+# Start dev server with the example app
+vibe example/App.vibe --watch
+
+# Or with your own file
+vibe MyApp.vibe --watch
 ```
 
 - Starts a dev server at `http://localhost:3000`
@@ -107,7 +117,11 @@ vibe App.vibe --watch
 ### Deploy to Vercel
 
 ```bash
-vibe App.vibe --deploy
+# Deploy the example app
+vibe example/App.vibe --deploy
+
+# Or deploy your own
+vibe MyApp.vibe --deploy
 ```
 
 This will:
@@ -147,25 +161,35 @@ The compiler will:
 
 ## 🧠 Choosing Your OpenAI Model
 
-VibeScript lets you choose which OpenAI LLM to use for generating your vibes.
+VibeScript lets you choose which OpenAI LLM to use for generating your vibes. 
 
 ### Available Models:
-- `gpt-4o` – High-quality, multimodal reasoning model.
-- `gpt-4o-mini` – Cheaper, faster version of GPT-4o. *(default)*
-- `gpt-4-turbo` – Optimized GPT-4 for speed and cost.
-- `gpt-3.5-turbo` – Fast, inexpensive, good for simple components.
-- `o1-preview` – Reasoning-focused preview model.
-- `o1-mini` – Smaller reasoning model for quick builds.
+- `gpt-5` – Latest and most capable model for complex generation and the best UI. **Best quality, highest cost.**
+- `gpt-4o` – High-quality, multimodal model. **Good quality, high cost.**
+- `gpt-4.1` – Advanced reasoning and analysis capabilities. **Very good quality, moderate-high cost.**
+- `gpt-4.1-mini` – Faster, more cost-effective version of GPT-4.1. **Good quality, moderate cost.**
+- `gpt-4.1-nano` – Even faster, more cost-effective version of GPT-4.1-mini. **Basic quality, low cost.**
+- `o3` – OpenAI's reasoning-focused model. **Good quality, moderate cost.**
+- `o4-mini` – Smaller, faster reasoning model. **Basic quality, low cost.**
+- `gpt-oss-120b` – Open source model with 120B parameters. **Variable quality, very low cost.**
+- `gpt-oss-20b` – Open source model with 20B parameters. **Basic quality, very low cost.**
+
+### Model Selection Guide:
+- **Production/Professional Sites**: Use `gpt-5`, `gpt-4o`, or `gpt-4.1`
+- **Personal Projects/Prototypes**: Use `gpt-4.1-mini` or `gpt-4.1-nano`
+- **Budget-Conscious Development**: Use `o3` or `o4-mini`
+- **Experimental/Open Source**: Use `gpt-oss-120b` or `gpt-oss-20b`
 
 ### Example:
 ```bash
-vibe App.vibe --model gpt-4o
+vibe App.vibe --model gpt-5
 ```
 
 This will:
-- Use `gpt-4o` for all component generation
-- Cache results separately per model (so switching models won’t overwrite previous cache)
-- Allow you to experiment with speed vs quality trade-offs
+- Use `gpt-5` for all component generation
+- Produce higher quality, more polished websites
+- Cache results separately per model (so switching models won't overwrite previous cache)
+- Allow you to experiment with speed vs. quality trade-offs
 
 ---
 
@@ -178,26 +202,29 @@ VibeScript can be configured via:
 ### Example `vibe.config.json`
 ```json
 {
-  "model": "gpt-4o",
+  "model": "gpt-5",
   "port": 4000
 }
 ```
 
-- `model` – Default OpenAI model to use for component generation.
+- `model` – Default OpenAI model to use for component generation. **Recommended: gpt-5 for best results.**
 - `port` – Port for the dev server in `--watch` mode.
 
 ### Priority:
 1. Command-line flags (highest priority)
 2. `vibe.config.json`
-3. Built-in defaults (`gpt-4o-mini` for model, `3000` for port)
+3. Built-in defaults (`gpt-4.1-mini` for model, `3000` for port)
 
 ### Example Usage:
 ```bash
 # Uses model from config file
-vibe App.vibe --watch
+vibe example/App.vibe --watch
 
-# Overrides config file
-vibe App.vibe --model gpt-4o-mini --port 5000
+# Overrides config file with higher quality model
+vibe example/App.vibe --model gpt-4o --port 5000
+
+# Quick test with budget model
+vibe example/App.vibe --model gpt-4.1-nano
 ```
 
 ---

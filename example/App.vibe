@@ -1,0 +1,50 @@
+component Header:
+    "A dark blue header with white text, containing a logo on the left and navigation menu on the right. Use a subtle gradient background."
+
+component Sidebar:
+    "A left sidebar with a dark theme, containing navigation links and a user profile section at the bottom. Include icons for each menu item."
+
+component MainContent:
+    "The main content area with a light background, containing a welcome message and a grid of content cards. Use proper spacing and typography."
+
+component ContentCard:
+    "A card component with a white background, subtle shadow, rounded corners, and hover effects. Include an icon, title, and description text."
+
+component ChartWidget:
+    "A data visualization widget showing a bar chart with sample data. Use a clean design with proper colors and labels."
+
+component StatusIndicator:
+    "A circular status indicator that shows different colors (green for success, yellow for warning, red for error). Include an icon and status text."
+
+component ActionButton:
+    "A primary action button with a blue gradient background, white text, and hover effects. Include an icon and button text."
+
+component Footer:
+    "A footer with a dark theme, containing copyright information, social media links, and a newsletter signup form."
+
+component Modal:
+    "A modal dialog component with a semi-transparent backdrop, white background, rounded corners, and close button. Include header, body, and footer sections."
+
+component Notification:
+    "A notification toast component that appears at the top-right corner. Include different types (success, error, warning) with appropriate colors and icons."
+
+page Dashboard:
+    Header
+    Sidebar
+    MainContent
+    "A section with three ContentCard components arranged horizontally, each showing different types of information."
+    ChartWidget
+    "A status overview section with multiple StatusIndicator components in a grid layout."
+    Footer
+
+page Settings:
+    Header
+    Sidebar
+    "A settings page with form controls, toggles, and configuration options. Use a clean, organized layout with proper grouping."
+    ActionButton
+    Footer
+
+page Profile:
+    Header
+    "A user profile page with avatar, personal information, preferences, and account settings. Include form fields and save buttons."
+    Footer

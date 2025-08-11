@@ -29,18 +29,18 @@ function printConfig(config) {
 }
 
 function checkApiKey() {
-    if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.trim() === "") {
-      console.error(
-        chalk.red.bold("\n❌ Missing OpenAI API Key!") +
-          "\n\nPlease set your API key before running VibeScript:\n" +
-          chalk.yellow("export OPENAI_API_KEY=\"your_api_key_here\"") +
-          "\n\nGet one here: " +
-          chalk.blue.underline("https://platform.openai.com/account/api-keys") +
-          "\n"
-      );
-      process.exit(1);
-    }
+  if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY.trim() === "") {
+    console.error(
+      chalk.red.bold("\n❌ Missing OpenAI API Key!") +
+        "\n\nPlease set your API key before running VibeScript:\n" +
+        chalk.yellow("export OPENAI_API_KEY=\"your_api_key_here\"") +
+        "\n\nGet one here: " +
+        chalk.blue.underline("https://platform.openai.com/account/api-keys") +
+        "\n"
+    );
+    process.exit(1);
   }
+}
 
 const program = new Command();
 const fileConfig = loadConfig();
@@ -56,8 +56,8 @@ program
   .option("-d, --deploy", "Deploy to Vercel after build")
   .option(
     "-m, --model <model>",
-    "Choose OpenAI model (gpt-4o, gpt-4o-mini, gpt-4-turbo, gpt-3.5-turbo, o1-preview, o1-mini)",
-    fileConfig.model || "gpt-4o-mini"
+    "Choose OpenAI model (gpt-5, gpt-4o, gpt-4.1, gpt-4.1-nano, gpt-4.1-mini, o3, o4-mini, gpt-oss-120b, gpt-oss-20b, etc)",
+    fileConfig.model || "gpt-4.1-nano"
   )
   .option(
     "-p, --port <port>",
@@ -65,20 +65,24 @@ program
     fileConfig.port || 3000
   )
   .action(async (file, options) => {
-    checkApiKey(); // ✅ Check before doing anything
+    checkApiKey(); // Check before doing anything
 
     const config = {
       model: options.model,
-      port: options.port
+      port: options.port,
     };
 
     printConfig(config);
 
     if (options.watch) {
+      console.log(chalk.blue("🔄 Starting development mode..."));
       await watchVibeScript(file, config);
     } else {
+      console.log(chalk.blue("🔨 Building your vibes..."));
       await compileVibeScript(file, config);
+      console.log(chalk.green("✅ Build complete! Check the 'dist' folder for your generated files."));
       if (options.deploy) {
+        console.log(chalk.blue("🚀 Deploying to Vercel..."));
         await deployToVercel();
       }
     }
