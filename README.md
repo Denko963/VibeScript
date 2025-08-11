@@ -1,12 +1,3 @@
-```
- _    ___ __        _____           _       __ 
-| |  / (_) /_  ___ / ___/__________(_)___  / /_
-| | / / / __ \/ _ \\__ \/ ___/ ___/ / __ \/ __/
-| |/ / / /_/ /  __/__/ / /__/ /  / / /_/ / /_  
-|___/_/_.___/\___/____/\___/_/  /_/ .___/\__/  
-                                 /_/           
-```
-
 # 🌊 VibeScript
 
 > **Code is dead. Vibes are forever.** 
@@ -37,6 +28,15 @@ component Navbar:
 - **🧘 Zero Learning Curve** – If you can describe it, you can ship it.
 - **🧠 Model Selection** – Choose your OpenAI LLM for generation.
 - **⚙️ Config File Support** – Set defaults in `vibe.config.json`.
+
+---
+
+## 🏆 Why Use VibeScript?
+
+- You hate typing `div` tags.
+- You believe “design is just vibes”.
+- You want to feel like a **10x developer** without actually learning anything.
+- You want to deploy a site in 5 minutes and spend the rest of the day tweeting about it.
 
 ---
 
@@ -202,7 +202,7 @@ vibe App.vibe --model gpt-4o-mini --port 5000
 
 ---
 
-## ⚙️ How It Works (Totally Serious Technical Explanation)
+## ⚙️ How It Works
 
 1. **Prompt Parsing** – VibeScript reads your `.vibe` file and extracts components and pages.
 2. **Hashing & Caching** – Each prompt is hashed. If unchanged, it’s pulled from `.vibecache.json`.
@@ -219,12 +219,3 @@ vibe App.vibe --model gpt-4o-mini --port 5000
 - Node.js 18+
 - An OpenAI API key
 - A willingness to let AI decide your design choices
-
----
-
-## 🏆 Why Use VibeScript?
-
-- You hate typing `div` tags.
-- You believe “design is just vibes”.
-- You want to feel like a **10x developer** without actually learning anything.
-- You want to deploy a site in 5 minutes and spend the rest of the day tweeting about it.
